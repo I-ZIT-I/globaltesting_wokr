@@ -1,0 +1,25 @@
+{
+  "name": "Kodoku Full Body Player V1",
+  "created": "2026-08-02",
+  "files": [
+    "Code/Kodoku/Player/Animation/KodokuAnimatorDriver.Movement.cs",
+    "Code/Kodoku/Player/Animation/KodokuAnimatorDriver.Parameters.cs",
+    "Code/Kodoku/Player/Animation/KodokuAnimatorDriver.Weapon.cs",
+    "Code/Kodoku/Player/Animation/KodokuAnimatorDriver.cs",
+    "Code/Kodoku/Player/Core/KodokuPlayerState.cs",
+    "Code/Kodoku/Player/Equipment/KodokuBoneSocket.cs",
+    "Code/Kodoku/Player/Equipment/KodokuEquipmentAttachment.cs",
+    "Code/Kodoku/Player/Equipment/KodokuSocketController.cs",
+    "Code/Kodoku/Player/Input/KodokuPlayerInput.cs",
+    "Code/Kodoku/Player/Movement/KodokuCharacterMotor.Ground.cs",
+    "Code/Kodoku/Player/Movement/KodokuCharacterMotor.Movement.cs",
+    "Code/Kodoku/Player/Movement/KodokuCharacterMotor.cs",
+    "Code/Kodoku/Player/View/KodokuFirstPersonVisibility.cs",
+    "Code/Kodoku/Player/View/KodokuPlayerCamera.cs",
+    "README_SETUP.md"
+  ],
+  "animgraph_source": "kodokan(25).vanmgrph",
+  "model_source": "sebastian(7).vmdl",
+  "camera_normal_bone": "head",
+  "camera_aim_bone": "aim_eye.r"
+}

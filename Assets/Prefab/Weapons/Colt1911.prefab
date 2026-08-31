@@ -1,0 +1,270 @@
+{
+  "RootObject": {
+    "__guid": "f7fcb96a-96b8-456c-a5e5-e778e87ebe6d",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "colt1911",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [
+      {
+        "__type": "Kodoku.EquippedItemAnimator",
+        "__guid": "245a78e5-19f5-4912-82db-8110c13ffaac",
+        "__enabled": true,
+        "Flags": 0,
+        "DebugLogs": false,
+        "EjectBrass": {
+          "_type": "gameobject",
+          "prefab": "prefabs/effects/default_brasseject.prefab"
+        },
+        "MuzzleEffect": {
+          "_type": "gameobject",
+          "prefab": "prefabs/effects/default_muzzleflash.prefab"
+        },
+        "MuzzleGameObject": {
+          "_type": "gameobject",
+          "go": "b5b8d064-1e8c-4bdb-b312-d45cf09e0f0b"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Renderer": {
+          "_type": "component",
+          "component_id": "9a87105f-b4c5-4602-97a7-b1087c9c7f5a",
+          "go": "28f8cc3d-b8ab-4b00-98a4-bf500b6f3e8a",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "ShellEjectGameObject": {
+          "_type": "gameobject",
+          "go": "ce3ad4c3-9f50-4577-8b23-8bf2efff3287"
+        }
+      },
+      {
+        "__type": "Kodoku.KodokuWeaponFireController",
+        "__guid": "40e948fa-95e7-4ec0-9efd-1c7be96f2b9f",
+        "__enabled": true,
+        "Flags": 0,
+        "DebugTraceDuration": 2,
+        "DebugTraceOverlay": true,
+        "DirectionAxis": "Left",
+        "DrawDebugTraces": true,
+        "LogHits": true,
+        "Muzzle": {
+          "_type": "gameobject",
+          "go": "b5b8d064-1e8c-4bdb-b312-d45cf09e0f0b"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "PrimaryFireMode": null
+      },
+      {
+        "__type": "Kodoku.KodokuSingleTraceFireMode",
+        "__guid": "c34cfd74-fb4a-4d1d-9d01-cb4c922b782b",
+        "__enabled": true,
+        "Flags": 0,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Range": 5000
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "28f8cc3d-b8ab-4b00-98a4-bf500b6f3e8a",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "Body",
+        "Position": "0,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "9a87105f-b4c5-4602-97a7-b1087c9c7f5a",
+            "__enabled": true,
+            "Flags": 0,
+            "AnimationGraph": "animgraphs/gun_colt.vanmgrph",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": null,
+            "CreateAttachments": false,
+            "CreateBoneObjects": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Materials": null,
+            "Model": "gun_colt.vmdl",
+            "Morphs": {},
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "Parameters": {
+              "bools": {},
+              "ints": {},
+              "floats": {},
+              "vectors": {},
+              "rotations": {}
+            },
+            "PlaybackRate": 1,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Sequence": {
+              "Name": null,
+              "Looping": true,
+              "Blending": false
+            },
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "b5b8d064-1e8c-4bdb-b312-d45cf09e0f0b",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "Muzzle",
+        "Position": "-9.7347517,-1.06692314E-05,6.47962856",
+        "Rotation": "-8.15288149E-06,7.67996607E-06,0.70710665,0.707106888",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Kodoku.KodokuBoneSocket",
+            "__guid": "acbe8942-60b9-438f-abf9-af0d8bcfc078",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyRenderer": {
+              "_type": "component",
+              "component_id": "9a87105f-b4c5-4602-97a7-b1087c9c7f5a",
+              "go": "28f8cc3d-b8ab-4b00-98a4-bf500b6f3e8a",
+              "component_type": "SkinnedModelRenderer"
+            },
+            "BoneName": "muzzle",
+            "FollowPosition": true,
+            "FollowRotation": true,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "PositionOffset": "0,0,0",
+            "RotationOffset": "0,0,0",
+            "Scale": "1,1,1"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "ce3ad4c3-9f50-4577-8b23-8bf2efff3287",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "ShellEject",
+        "Position": "-1.34939075,1.10999632,6.47960472",
+        "Rotation": "-8.15288149E-06,7.67996607E-06,0.70710665,0.707106888",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Kodoku.KodokuBoneSocket",
+            "__guid": "3ead5325-1ee6-4bb7-ac26-f51b05208093",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyRenderer": {
+              "_type": "component",
+              "component_id": "9a87105f-b4c5-4602-97a7-b1087c9c7f5a",
+              "go": "28f8cc3d-b8ab-4b00-98a4-bf500b6f3e8a",
+              "component_type": "SkinnedModelRenderer"
+            },
+            "BoneName": "shell_eject",
+            "FollowPosition": true,
+            "FollowRotation": true,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "PositionOffset": "1.10999954,0.0699999928,0",
+            "RotationOffset": "0,0,0",
+            "Scale": "1,1,1"
+          }
+        ],
+        "Children": []
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

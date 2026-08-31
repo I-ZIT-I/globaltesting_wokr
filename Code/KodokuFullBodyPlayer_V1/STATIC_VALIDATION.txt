@@ -1,0 +1,30 @@
+KODOKU FULL BODY PLAYER V1 - STATIC VALIDATION
+Date: 2026-08-02
+
+Checks performed:
+- Every C# file has balanced braces.
+- No unqualified MathF usage.
+- AnimGraph raw parameter string literals are centralized in KodokuAnimatorDriver.Parameters.cs.
+- KodokuCharacterMotor and KodokuAnimatorDriver are the only partial types and all their declarations use partial.
+- No Combined.cs file is included.
+- Camera defaults: head -> aim_eye.r, fallback aim_eye_r -> head.
+
+Important limitation:
+- The package was not compiled against the user's live S&box assemblies.
+- Runtime and compiler validation must be performed in the S&box editor.
+
+Files:
+- Code/Kodoku/Player/Animation/KodokuAnimatorDriver.Movement.cs | lines=80 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/Animation/KodokuAnimatorDriver.Parameters.cs | lines=87 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/Animation/KodokuAnimatorDriver.Weapon.cs | lines=40 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/Animation/KodokuAnimatorDriver.cs | lines=136 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/Core/KodokuPlayerState.cs | lines=144 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/Equipment/KodokuBoneSocket.cs | lines=84 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/Equipment/KodokuEquipmentAttachment.cs | lines=129 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/Equipment/KodokuSocketController.cs | lines=50 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/Input/KodokuPlayerInput.cs | lines=146 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/Movement/KodokuCharacterMotor.Ground.cs | lines=108 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/Movement/KodokuCharacterMotor.Movement.cs | lines=252 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/Movement/KodokuCharacterMotor.cs | lines=273 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/View/KodokuFirstPersonVisibility.cs | lines=72 | braces=0 | unqualified_MathF=False
+- Code/Kodoku/Player/View/KodokuPlayerCamera.cs | lines=256 | braces=0 | unqualified_MathF=False

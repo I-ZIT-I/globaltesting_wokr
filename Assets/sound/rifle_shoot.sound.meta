@@ -1,0 +1,21 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Rifle Shoot",
+      "Type": "sound",
+      "Org": "local",
+      "Ident": "rifle_shoot",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "sound/rifle_shoot.sound"
+      }
+    }
+  }
+}

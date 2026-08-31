@@ -1,0 +1,2032 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc30:version{8c2d7a91-9c42-4bf0-883a-5a3b1762d4f1} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "kodokan_v1/seb.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"torso",
+								"upperarm_l",
+								"upperarm_r",
+								"upperleg_r",
+								"upperleg_l",
+								"lowerleg_r",
+								"lowerleg_l",
+								"lowerarm_l",
+								"lowerarm_r",
+								"hand_r",
+								"foot_r",
+								"foot_l",
+								"hand_l",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "material.vmat"
+								to = "kodokan_v1/v4_k.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "idle"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "animation/idle_loop.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 13
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "crouch_pose"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "idle"
+								frame = 0
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "animation/crouch_pose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 9
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "crouch_idle"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "animation/crouch_idle_loop.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 8
+						reverse = false
+					},
+					{
+						_class = "Folder"
+						name = "run"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "runS"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 19
+										event_keys = 
+										{
+											Attachment = "foot_r"
+											Foot = "1"
+											Volume = 1.0
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 9
+										event_keys = 
+										{
+											Attachment = "foot_l"
+											Foot = "0"
+											Volume = 1.0
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/runs_loop.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 17
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "runN"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 2
+										event_keys = 
+										{
+											Attachment = "foot_r"
+											Foot = "1"
+											Volume = 1.0
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 13
+										event_keys = 
+										{
+											Attachment = "foot_l"
+											Foot = "0"
+											Volume = 1.0
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/runn_loop.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 16
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "runW"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 15
+										event_keys = 
+										{
+											Attachment = "foot_r"
+											Foot = "1"
+											Volume = 1.0
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 5
+										event_keys = 
+										{
+											Attachment = "foot_l"
+											Foot = "0"
+											Volume = 1.0
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/runw_loop.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 23
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "runE"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 8
+										event_keys = 
+										{
+											Attachment = "foot_r"
+											Foot = "1"
+											Volume = 1.0
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 18
+										event_keys = 
+										{
+											Attachment = "foot_l"
+											Foot = "0"
+											Volume = 1.0
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/rune_loop.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 15
+								reverse = false
+							},
+						]
+					},
+					{
+						_class = "Folder"
+						name = "walk"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "walkN"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 1
+										event_keys = 
+										{
+											Attachment = "foot_r"
+											Foot = "1"
+											Volume = 1.0
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 12
+										event_keys = 
+										{
+											Attachment = "foot_l"
+											Foot = "0"
+											Volume = 1.0
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/walkn.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 25
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "walkS"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 20
+										event_keys = 
+										{
+											Attachment = "foot_r"
+											Foot = "1"
+											Volume = 1.0
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 9
+										event_keys = 
+										{
+											Attachment = "foot_l"
+											Foot = "0"
+											Volume = 1.0
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/walks.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 26
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "walkE"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 5
+										event_keys = 
+										{
+											Attachment = "foot_r"
+											Foot = "1"
+											Volume = 1.0
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 16
+										event_keys = 
+										{
+											Attachment = "foot_l"
+											Foot = "0"
+											Volume = 1.0
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/walke.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 24
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "walkW"
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 17
+										event_keys = 
+										{
+											Attachment = "foot_r"
+											Foot = "1"
+											Volume = 1.0
+										}
+									},
+									{
+										_class = "AnimEvent"
+										event_class = "AE_FOOTSTEP"
+										event_frame = 5
+										event_keys = 
+										{
+											Attachment = "foot_l"
+											Foot = "0"
+											Volume = 1.0
+										}
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/walkw.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 27
+								reverse = false
+							},
+						]
+					},
+					{
+						_class = "AnimFile"
+						name = "idle_delta"
+						children = 
+						[
+							{
+								_class = "AnimLinearDelta"
+								spline = false
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "animation/idle_loop.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 19
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "default"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "animation/a_default.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 16
+						reverse = false
+					},
+					{
+						_class = "Folder"
+						name = "Rifle"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "2hand_rifle_rest"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/2hand_rifle_rest.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 12
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "2hand_rifle_rest_shoot"
+								children = 
+								[
+									{
+										_class = "AnimLinearDelta"
+										spline = false
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/2hand_rifle_rest_shoot.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 15
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "2hand_rifle_reload"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/2hand_rifle_rest_reload.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 14
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "2hand_rifle_rest2"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/2hand_rifle_rest2.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 13
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "2hand_rifle_aim_rest"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/2hand_rifle_aim_rest.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 8
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "2hand_rifle_aim_reload"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/2hand_rifle_aim_reload.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 7
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "2hand_rifle_aim_shoot"
+								children = 
+								[
+									{
+										_class = "AnimLinearDelta"
+										spline = false
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/2hand_rifle_aim_shoot.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 10
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "2hand_rifle_aim_rest_2"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/2hand_rifle_aim_rest2.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 9
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "2hand_rifle_aim_shoot_running"
+								children = 
+								[
+									{
+										_class = "AnimLinearDelta"
+										spline = false
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/2hand_rifle_aim_shoot_running.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 11
+								reverse = false
+							},
+						]
+					},
+					{
+						_class = "Folder"
+						name = "Pistol"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "1hand_rifle_rest"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/1hand_gun_rest.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 3
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "1hand_gun_rest2"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/1hand_gun_rest2.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 4
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "1hand_rest_reload"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/1hand_gun_rest_reload.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 5
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "1hand_gun_rest_shoot"
+								children = 
+								[
+									{
+										_class = "AnimLinearDelta"
+										spline = false
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/1hand_gun_rest_shoot.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 6
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "1hand_gun_aim_rest"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/1hand_gun_aim_rest.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 1
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "1hand_gun_aim_reload"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/1hand_gun_aim_reload.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "1hand_gun_aim_shoot"
+								children = 
+								[
+									{
+										_class = "AnimLinearDelta"
+										spline = false
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "animation/1hand_gun_aim_shoot.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 2
+								reverse = false
+							},
+						]
+					},
+					{
+						_class = "Folder"
+						name = "Emotion"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "Emotion_Sad"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										disabled = true
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "Animation/Emotion_Sad.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "Emotion_Idle"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										disabled = true
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "Animation/Emotion_Idle.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "Emotion_Crazy"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										disabled = true
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "Animation/Emotion_Crazy.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "Emotion_Angry"
+								children = 
+								[
+									{
+										_class = "AnimSubtract"
+										disabled = true
+										anim_name = "idle"
+										frame = 0
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "Animation/Emotion_Angry.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+						]
+					},
+					{
+						_class = "AnimFile"
+						name = "Left_Rotate"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "Animation/Left_Rotate.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Right_Rotate"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "Animation/Right_Rotate.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "IKData"
+				children = 
+				[
+					{
+						_class = "IKChain"
+						name = "foot_r"
+						children = 
+						[
+							{
+								_class = "IKChainJoint"
+								name = "upperleg_r"
+								children = 
+								[
+									{
+										_class = "IKChainJoint"
+										name = "lowerleg_r"
+										children = 
+										[
+											{
+												_class = "IKChainJoint"
+												name = "foot_r1"
+												bone = "foot_r"
+											},
+										]
+										bone = "lowerleg_r"
+									},
+								]
+								bone = "upperleg_r"
+							},
+						]
+						m_bDoBonesOrientAlongPositiveX = false
+						"m_DefaultSolverSettings.m_nNumIterations" = 6
+						"m_DefaultSolverSettings.m_SolverType " = "IKSOLVER_TwoBone"
+						"m_DefaultTargetSettings.m_Bone" = 
+						{
+							m_Name = "iklegtarget_r"
+						}
+						"m_DefaultTargetSettings.m_TargetSource" = "Bone"
+						"m_Data.m_DefaultTargetSettings.m_AnimgraphParameterNamePosition" = 
+						{
+							m_id = 4294967295
+						}
+						"m_Data.m_EndEffectorFixedOffsetAttachment" = 
+						{
+							m_Name = ""
+						}
+						"m_Data.m_bParentJointRequiresAlignment" = false
+					},
+					{
+						_class = "IKChain"
+						name = "foot_l"
+						children = 
+						[
+							{
+								_class = "IKChainJoint"
+								name = "upperleg_l"
+								children = 
+								[
+									{
+										_class = "IKChainJoint"
+										name = "lowerleg_l"
+										children = 
+										[
+											{
+												_class = "IKChainJoint"
+												name = "foot_l1"
+												bone = "foot_l"
+											},
+										]
+										bone = "lowerleg_l"
+									},
+								]
+								bone = "upperleg_l"
+							},
+						]
+						m_bDoBonesOrientAlongPositiveX = false
+						"m_DefaultSolverSettings.m_nNumIterations" = 6
+						"m_DefaultSolverSettings.m_SolverType " = "IKSOLVER_TwoBone"
+						"m_DefaultTargetSettings.m_Bone" = 
+						{
+							m_Name = "iklegtarget_l"
+						}
+						"m_DefaultTargetSettings.m_TargetSource" = "Bone"
+						"m_Data.m_DefaultTargetSettings.m_AnimgraphParameterNamePosition" = 
+						{
+							m_id = 4294967295
+						}
+						"m_Data.m_EndEffectorFixedOffsetAttachment" = 
+						{
+							m_Name = ""
+						}
+						"m_Data.m_bParentJointRequiresAlignment" = false
+					},
+					{
+						_class = "IKChain"
+						name = "hand_LtoR"
+						children = 
+						[
+							{
+								_class = "IKChainJoint"
+								name = "upperarm_l"
+								children = 
+								[
+									{
+										_class = "IKChainJoint"
+										name = "lowerarm_l"
+										children = 
+										[
+											{
+												_class = "IKChainJoint"
+												name = "hand_l1"
+												bone = "hand_l"
+											},
+										]
+										bone = "lowerarm_l"
+									},
+								]
+								bone = "upperarm_l"
+							},
+						]
+						m_bDoBonesOrientAlongPositiveX = true
+						"m_DefaultSolverSettings.m_nNumIterations" = 6
+						"m_DefaultSolverSettings.m_SolverType " = "IKSOLVER_TwoBone"
+						"m_DefaultTargetSettings.m_Bone" = 
+						{
+							m_Name = "hand_LtoR"
+						}
+						"m_DefaultTargetSettings.m_TargetSource" = "Bone"
+						"m_Data.m_DefaultTargetSettings.m_AnimgraphParameterNamePosition" = 
+						{
+							m_id = 4294967295
+						}
+						"m_Data.m_EndEffectorFixedOffsetAttachment" = 
+						{
+							m_Name = ""
+						}
+						"m_Data.m_bParentJointRequiresAlignment" = true
+					},
+				]
+			},
+			{
+				_class = "BoneMarkupList"
+				children = 
+				[
+					{
+						_class = "BoneMarkup"
+						target_bone = "iklegtarget_l"
+						ignore_Translation = false
+						ignore_rotation = false
+						do_not_discard = true
+					},
+					{
+						_class = "BoneMarkup"
+						target_bone = "iklegtarget_r"
+						ignore_Translation = false
+						ignore_rotation = false
+						do_not_discard = true
+					},
+				]
+				bone_cull_type = "None"
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "foot_r"
+						parent_bone = "foot_r"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "foot_l"
+						parent_bone = "foot_l"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "eyes"
+						parent_bone = "head"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 90.0, 90.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "gun_forward"
+						parent_bone = "hand_r"
+						relative_origin = [ 5.640869, 53.913105, -11.017853 ]
+						relative_angles = [ -0.0, 90.000008, 90.000008 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "left_eye"
+						parent_bone = "head"
+						relative_origin = [ -4.0, 10.0, 2.0 ]
+						relative_angles = [ 0.0, 90.0, 90.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "right_eye"
+						parent_bone = "head"
+						relative_origin = [ 4.0, 10.0, 2.0 ]
+						relative_angles = [ 0.0, 90.0, 90.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "LookAtChain"
+						name = "lookat_weak"
+						lookat_chain = 
+						{
+							name = ""
+							bones = 
+							[
+								{
+									name = "head"
+									weight = 1.0
+								},
+								{
+									name = "neck"
+									weight = 1.0
+								},
+								{
+									name = "upperchest"
+									weight = 1.0
+								},
+								{
+									name = "midchest"
+									weight = 0.589
+								},
+								{
+									name = "lowerchest"
+									weight = 0.0
+								},
+							]
+						}
+					},
+					{
+						_class = "LookAtChain"
+						name = "lookat"
+						lookat_chain = 
+						{
+							name = ""
+							bones = 
+							[
+								{
+									name = "head"
+									weight = 1.0
+								},
+								{
+									name = "neck"
+									weight = 1.0
+								},
+								{
+									name = "upperchest"
+									weight = 0.767
+								},
+								{
+									name = "midchest"
+									weight = 1.0
+								},
+								{
+									name = "lowerchest"
+									weight = 1.0
+								},
+							]
+						}
+					},
+					{
+						_class = "LookAtChain"
+						name = "gun_aim"
+						lookat_chain = 
+						{
+							name = ""
+							bones = 
+							[
+								{
+									name = "hand_r"
+									weight = 1.0
+								},
+								{
+									name = "lowerarm_r"
+									weight = 1.0
+								},
+								{
+									name = "upperarm_r"
+									weight = 1.0
+								},
+								{
+									name = "upperchest"
+									weight = 1.0
+								},
+								{
+									name = "head"
+									weight = 1.0
+								},
+								{
+									name = "neck"
+									weight = 0.0
+								},
+								{
+									name = "midchest"
+									weight = 0.0
+								},
+							]
+						}
+					},
+					{
+						_class = "LookAtChain"
+						name = "based_lookat"
+						lookat_chain = 
+						{
+							name = ""
+							bones = 
+							[
+								{
+									name = "head"
+									weight = 0.428
+								},
+								{
+									name = "neck"
+									weight = 0.178
+								},
+								{
+									name = "upperchest"
+									weight = 0.089
+								},
+								{
+									name = "midchest"
+									weight = 0.0
+								},
+								{
+									name = "lowerchest"
+									weight = 0.0
+								},
+							]
+						}
+					},
+					{
+						_class = "LookAtChain"
+						name = "pupiles_left"
+						lookat_chain = 
+						{
+							name = ""
+							bones = 
+							[
+								{
+									name = "pupile_l"
+									weight = 1.0
+								},
+								{
+									name = "pupile_r"
+									weight = 0.0
+								},
+							]
+						}
+					},
+					{
+						_class = "LookAtChain"
+						name = "pupiles_right"
+						lookat_chain = 
+						{
+							name = ""
+							bones = 
+							[
+								{
+									name = "eye_r"
+									weight = 0.0
+								},
+								{
+									name = "pupile_r"
+									weight = 1.0
+								},
+							]
+						}
+					},
+					{
+						_class = "LookAtChain"
+						name = "head_lookat"
+						lookat_chain = 
+						{
+							name = ""
+							bones = 
+							[
+								{
+									name = "head"
+									weight = 1.0
+								},
+								{
+									name = "neck"
+									weight = 0.6
+								},
+								{
+									name = "upperchest"
+									weight = 0.25
+								},
+								{
+									name = "midchest"
+									weight = 0.08
+								},
+								{
+									name = "lowerchest"
+									weight = 0.0
+								},
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "WeightListList"
+				children = 
+				[
+					{
+						_class = "WeightList"
+						name = "torso"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "head"
+								weight = 1.0
+							},
+							{
+								bone = "ikelbowpole_l"
+								weight = 1.0
+							},
+							{
+								bone = "ikelbowpole_l_end"
+								weight = 1.0
+							},
+							{
+								bone = "ikelbowpole_r"
+								weight = 1.0
+							},
+							{
+								bone = "ikelbowpole_r_end"
+								weight = 1.0
+							},
+							{
+								bone = "ikhandtarget_l"
+								weight = 1.0
+							},
+							{
+								bone = "ikhandtarget_l_end"
+								weight = 1.0
+							},
+							{
+								bone = "ikhandtarget_r"
+								weight = 1.0
+							},
+							{
+								bone = "ikhandtarget_r_end"
+								weight = 1.0
+							},
+							{
+								bone = "iklegpole_r_end"
+								weight = 0.0
+							},
+							{
+								bone = "lowerchest"
+								weight = 0.0
+							},
+							{
+								bone = "midchest"
+								weight = 1.0
+							},
+							{
+								bone = "upperarm_l"
+								weight = 1.0
+							},
+							{
+								bone = "upperarm_r"
+								weight = 1.0
+							},
+							{
+								bone = "upperchest"
+								weight = 1.0
+							},
+							{
+								bone = "upperleg_l"
+								weight = 0.0
+							},
+							{
+								bone = "upperleg_r"
+								weight = 0.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "legs"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "iklegpole_l"
+								weight = 1.0
+							},
+							{
+								bone = "iklegpole_r"
+								weight = 1.0
+							},
+							{
+								bone = "iklegtarget_l"
+								weight = 0.934066
+							},
+							{
+								bone = "iklegtarget_r"
+								weight = 1.0
+							},
+							{
+								bone = "root_IK"
+								weight = 0.0
+							},
+							{
+								bone = "upperleg_l"
+								weight = 1.0
+							},
+							{
+								bone = "upperleg_r"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "eyes"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "eye_l"
+								weight = 1.0
+							},
+							{
+								bone = "eye_r"
+								weight = 1.0
+							},
+							{
+								bone = "loweye_r"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "arm"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "aim_eye"
+								weight = 1.0
+							},
+							{
+								bone = "basefingers_l"
+								weight = 1.0
+							},
+							{
+								bone = "basefingers_r"
+								weight = 1.0
+							},
+							{
+								bone = "baseindex_l"
+								weight = 1.0
+							},
+							{
+								bone = "baseindex_r"
+								weight = 1.0
+							},
+							{
+								bone = "basethumb_l"
+								weight = 1.0
+							},
+							{
+								bone = "basethumb_r"
+								weight = 1.0
+							},
+							{
+								bone = "hand_LtoR"
+								weight = 1.0
+							},
+							{
+								bone = "hand_l"
+								weight = 1.0
+							},
+							{
+								bone = "hand_r"
+								weight = 1.0
+							},
+							{
+								bone = "head"
+								weight = 1.0
+							},
+							{
+								bone = "ikelbowpole_l"
+								weight = 1.0
+							},
+							{
+								bone = "ikelbowpole_l_end"
+								weight = 1.0
+							},
+							{
+								bone = "ikelbowpole_r"
+								weight = 1.0
+							},
+							{
+								bone = "ikelbowpole_r_end"
+								weight = 1.0
+							},
+							{
+								bone = "ikhandtarget_l"
+								weight = 1.0
+							},
+							{
+								bone = "ikhandtarget_l_end"
+								weight = 1.0
+							},
+							{
+								bone = "ikhandtarget_r"
+								weight = 1.0
+							},
+							{
+								bone = "ikhandtarget_r_end"
+								weight = 1.0
+							},
+							{
+								bone = "iklegpole_r_end"
+								weight = 0.0
+							},
+							{
+								bone = "lowerarm_l"
+								weight = 0.496454
+							},
+							{
+								bone = "lowerarm_r"
+								weight = 0.510638
+							},
+							{
+								bone = "lowerchest"
+								weight = 0.0
+							},
+							{
+								bone = "midchest"
+								weight = 0.482269
+							},
+							{
+								bone = "midfingers_l"
+								weight = 1.0
+							},
+							{
+								bone = "midfingers_r"
+								weight = 1.0
+							},
+							{
+								bone = "midindex_r"
+								weight = 1.0
+							},
+							{
+								bone = "neck"
+								weight = 1.0
+							},
+							{
+								bone = "tipfingers_r"
+								weight = 1.0
+							},
+							{
+								bone = "tipindex_l"
+								weight = 1.0
+							},
+							{
+								bone = "tipindex_r"
+								weight = 1.0
+							},
+							{
+								bone = "upperarm_l"
+								weight = 0.460993
+							},
+							{
+								bone = "upperarm_r"
+								weight = 0.460993
+							},
+							{
+								bone = "upperchest"
+								weight = 1.0
+							},
+							{
+								bone = "upperleg_l"
+								weight = 0.0
+							},
+							{
+								bone = "upperleg_r"
+								weight = 0.0
+							},
+						]
+						master_morph_weight = -1.0
+						morph_weights = [  ]
+					},
+				]
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						scale = 0.3937
+						mirror_x = false
+						mirror_y = false
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = "animgraphs/kodokan.vanmgrph"
+		base_model_name = ""
+	}
+}
